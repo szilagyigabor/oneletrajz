@@ -1,10 +1,10 @@
 \pdfminorversion=7
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
-    \Title{Szilágyi Gábor - Önéletrajz}
-    \Author{Szilágyi Gábor}
+    \Title{Gábor Szilágyi}
+    \Author{Gábor Szilágyi}
     \Language{hu-HU}
-    \Subject{Önéletrajz beadva ide: thyssenkrupp Components Technology Hungary kft.}
-    \Keywords{önéletrajz, thyssenkrupp}	% \sep does not seem to work, only commas
+    \Subject{Curriculum Vitae for: thyssenkrupp Components Technology Hungary kft.}
+    \Keywords{cv, curriculum vitae, thyssenkrupp}	% \sep does not seem to work, only commas
 \end{filecontents*}
 
 \documentclass[a4paper,12pt,onesize,oneside,unicode,titlepage]{article}
@@ -26,10 +26,7 @@
 \usepackage{geometry}
 \usepackage{titlesec}
 \titleformat*{\section}{\large\bfseries\vspace{2.7ex}\titlerule\vspace{-2.7ex}}
-    %\sectionrule{0pt}{0pt}{-5pt}{1pt} % insert a thin rule
-% spacing before and after a section
-%\titlespacing*{\section}{0pt}{.2ex}{.2ex}
-%\titleformat*{\section}{\large\bfseries}
+
 
 \setlist[itemize]{itemsep=0.5ex, topsep=0pt} % enumitem setup
 % set the page layout
@@ -38,7 +35,8 @@
     left=15mm,
     right=15mm,
     bottom=0mm,
-    top=10mm}
+    top=10mm
+}
 
 % empty the headers, footers, pagenumbers…
 \pagestyle{empty}
@@ -52,10 +50,6 @@
     urlcolor=black,             % color of external links
     pdfnewwindow=true,         % links in new window
 }
-
-\makeatletter
-\def\PAX@attrs@URI#1{/F 4 #1}
-\makeatletter
 
 %% MACROS %%
 
@@ -73,7 +67,8 @@
     % print name centered and bold
     \begin{center} \textbf{#1} \end{center}\par
     % back to normal size and font
-    \normalsize\normalfont}
+    \normalsize\normalfont
+}
 
 % motto
 \newcommand{\motto}[1]{
@@ -82,7 +77,8 @@
     % print motto centered and slanted
     \begin{center} \textsl{#1}\end{center}\par
     % back to normal size and font
-    \normalsize \normalfont}
+    \normalsize \normalfont
+}
 
 % personal information
 \newcommand{\info}[2]{
@@ -91,7 +87,8 @@
     % create a box to align two pieces of text
     \parbox{\spacebox}{%
         \textsl{#1}} % slanted entry name
-    #2 \par} % entry value
+    #2 \par
+} % entry value
 
 % skill
 \newcommand{\skill}[2]{
@@ -100,11 +97,13 @@
     % create a box to align two pieces of text
     \parbox{3\spacebox}{% three times larger box
         \textsc{#1}} % small caps entry name
-    #2 \par} % entry value
+    #2 \par
+} % entry value
 
 % language level
 \newcommand{\lan}[2]{
-    \textbf{#1}\quad--\quad#2}    % entry value
+    \textbf{#1}\quad--\quad#2
+}    % entry value
 
 % education entry
 \newcommand{\education}[4]{
@@ -121,7 +120,8 @@
     \vspace*{0.5em}
     \noindent\hangindent=2em\hangafter=0 \small #4
     %back to normal size
-    \normalsize \par}
+    \normalsize \par
+}
 
 % work experience
 
@@ -139,7 +139,8 @@
     \vspace*{0.5em}
     \noindent\hangindent=2em\hangafter=0 \small #4
     %back to normal size
-    \normalsize \par}
+    \normalsize \par
+}
 
 \newcommand{\MyGraphicLogo}{% For imported graphic logo
     \begin{tikzpicture}[remember picture,overlay,yshift=-3cm, xshift=-3.5cm]
@@ -164,6 +165,7 @@
 \info{Email}{\href{mailto:gbr.szilagyi@gmail.com}{gbr.szilagyi@gmail.com}}
 \info{Phone}{\href{tel:+36307568542}{+36 30 756 8542}}
 \info{LinkedIn}{\href{https://www.linkedin.com/in/gabor-szilagyi-0b4b4720b/}{Gabor Szilagyi}}
+\info{GitHub}{\href{https://github.com/szilagyigabor}{szilagyigabor}}
 \info{Address}{1032 Budapest, Kiscelli utca 16, 7/40}
 \info{Birth}{1999.05.18.}
 % education
@@ -179,10 +181,11 @@
             \item Soldering tasks (mostly fine-tuning of matching/filter networks)
             \item PCB design in Altium, Schematic/BOM management
         \end{itemize}}
+    \vspace{1ex}
     \work{Hardware Intern}{2023--2024}{thyssenkrupp Components Technology Hungary kft.}{
         \begin{itemize} \setlength\itemsep{0.5ex}
             \item Worst case analysis of automotive electronics
-            \item PCB design in Altium
+            \item Complete PCB design in Altium
             \item Temperature chamber measurements
         \end{itemize}}
 % technical skills
@@ -191,11 +194,13 @@
     \skill{Other}{\textsl{Git, Vim, Linux, Altium, LTspice, Amateur Radio lincense}}
 % languages
 \section*{Languages}
+    \hspace{1cm}
     \lan{Hungarian}{native}
     \hfill
     \lan{English}{C1}
     \hfill
     \lan{German}{A1}
+    \hspace{1cm}
 % Social competencies
 \section*{Social competencies}
     \begin{itemize} \setlength\itemsep{0.5ex}
